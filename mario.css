@@ -1,0 +1,48 @@
+.cloud {
+  width: 300px;
+  position: absolute;
+  top: 0;
+  animation: clouds-animation 10s infinite ease-in;
+}
+
+.mario {
+  width: 150px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.pipe {
+  width: 75px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  animation: pipe-animation 10s infinite ease-in;
+}
+
+.jogo {
+  border: 10px solid lightblue;
+  border-bottom: 30px solid green;
+  border-radius: 5px;
+  height: 580px;
+  position: relative;
+  overflow: hidden;
+}
+
+@keyframes clouds-animation {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 100%;
+  }
+}
+
+@keyframes pipe-animation {
+  from {
+    right: -75px;
+  }
+  to {
+    right: 100%;
+  }
+}
