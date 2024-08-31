@@ -1,3 +1,4 @@
+const nuvem = document.querySelector(".cloud")
 const mario = document.querySelector(".mario");
 const pipe = document.querySelector(".pipe");
 const pontuacao = document.querySelector(".pontuacao");
@@ -11,12 +12,16 @@ const pulo = () => {
 const looping = setInterval(() => {
     const marioPosi = +window.getComputedStyle(mario).bottom.replace('px', '');
     const pipePosi = pipe.offsetLeft;
+    const nuvemPosi = nuvem.offsetLeft;
     if (pipePosi <= 150 && marioPosi <= 96 && pipePosi > 0) {
-        console.log("ta morto");
         pipe.style.animation = 'none';
         pipe.style.left = `${pipePosi}px`;
         mario.style.animation = 'none';
         mario.style.bottom = `${marioPosi}px`;
+        nuvem.style.animation = 'none';
+        nuvem.style.left = `${nuvemPosi}px`;
+        mario.src ='./assets/game-over-unscreen.gif';
+         clearInterval(looping);
     }else{
         acc = acc + 1;
         if(acc > 10){

@@ -24,9 +24,10 @@
   border: 10px solid lightblue;
   border-bottom: 30px solid green;
   border-radius: 5px;
-  height: 580px;
+  height: 625px;
   position: relative;
   overflow: hidden;
+  background: linear-gradient(180deg, rgb(84, 231, 231), rgb(131, 233, 233));
 }
 
 .pontuacao{
